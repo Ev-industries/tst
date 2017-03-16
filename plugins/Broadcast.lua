@@ -4,7 +4,7 @@ local function run(msg, matches)
 		--send_large_msg("chat#id"..matches[2], response)
 		send_large_msg("channel#id"..matches[2], response)
 	end
-	if matches[1] == 'broadcast' then
+	if matches[1] == 'msgall' then
 		if is_sudo(msg) then -- Only sudo !
 			local data = load_data(_config.moderation.data)
 			local groups = 'groups'
@@ -21,7 +21,7 @@ local function run(msg, matches)
 end
 return {
   patterns = {
-    "^[#!/](broadcast) +(.+)$",
+    "^[#!/](msgall) +(.+)$",
     "^[#!/](bc) (%d+) (.*)$"
   },
   run = run
