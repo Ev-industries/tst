@@ -17,7 +17,7 @@ local function check_member_superrem2(cb_extra, success, result)
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
 	  send_large_msg(channel, "Bot will leave the group Because group is not recharged")
-	  chat_del_user(get_receiver(msg), 'user#id'..202658733, ok_cb, false)
+	  chat_del_user(get_receiver(msg), 'user#id'..235691047, ok_cb, false)
 	  leave_channel(get_receiver(msg), ok_cb, false)
     end
   end
