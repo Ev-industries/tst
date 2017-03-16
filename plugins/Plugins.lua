@@ -11,6 +11,7 @@ local function plugin_enabled( name )
   return false
 end
 
+  --By Electrovirus
 -- Returns true if file exists in plugins folder
 local function plugin_exists( name )
   for k,v in pairs(plugins_names()) do
