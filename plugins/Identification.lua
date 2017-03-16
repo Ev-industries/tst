@@ -1,7 +1,7 @@
 do
 function run(msg, matches)
   if matches[1] == 'userid' then
-return "#⃣User info\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\nℹ️Status∶Recognized✔\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n📍FirstName | "..msg.from.first_name.."\n📍LastName | "..msg.from.last_name.."\n📍Username | @"..msg.from.username.."\n📍Identification | "..msg.from.id.."\n📍UserLink | t.me/"..msg.from.username..""
+return "#⃣User info\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\nℹ️Status∶Recognized✔\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n📍FirstName | "..msg.from.first_name.."\n📍Username | @"..msg.from.username.."\n📍Identification | "..msg.from.id.."\n📍UserLink | t.me/"..msg.from.username..""
 end
   if matches[1] == 'gpid' then
 return "#⃣Group info\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\nℹ️Status∶Moderated✔\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅\n📍GroupName | "..msg.to.title.."\n📍Identification | "..msg.to.id.."\n📍UserName | Not available in your region"  
