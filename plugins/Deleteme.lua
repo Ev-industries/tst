@@ -1,5 +1,5 @@
 local function run(msg, matches)
-if matches[1] == 'kickme' then
+if matches[1] == 'deleteme' then
 local hash = 'kick:'..msg.to.id..':'..msg.from.id
      redis:set(hash, "waite")
       return '🔖User ('..msg.from.username..') you have requested to leave the group\n🔵Press /yes to confirm\nOr\n🔴Press /no to ignore'
@@ -19,14 +19,14 @@ local hash = 'kick:'..msg.to.id..':'..msg.from.id
 	 if redis:get(hash) then
         if redis:get(hash) == "ok" then
          channel_kick("channel#id"..msg.to.id, "user#id"..msg.from.id, ok_cb, false)
-         return '❌User was kicked from ('..msg.to.title..') by kickme service'
+         return '❌User was kicked from ('..msg.to.title..') by deleteme service'
         end
       end
     end
 
 return {
   patterns = {
-  "^[!/#](kickme)",
+  "^[!/#](deleteme)",
   "^/yes$",
   "^/no$"
   },
