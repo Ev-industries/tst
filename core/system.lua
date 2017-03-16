@@ -212,12 +212,12 @@ function create_config( )
   config = {
     enabled_plugins = {
     "Autoleave",
-    "Bot",
-    "Broadcast",
+    "Database",
+    "Deleteme",
     "Identification",
     "Plugins",
-    "Status",
-    "Terminal",
+    "Delete",
+    "Unix",
     },
     sudo_users = {184018132},--Sudo users
     moderation = {data = 'core/moderation.json'},
