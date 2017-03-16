@@ -165,8 +165,8 @@ function run(msg, matches)
 			if not is_owner(msg) then return end
 			local expiretime = redis:hget ('expiretime', get_receiver(msg))
 			local now = tonumber(os.time())
-			local text4 = (math.floor((tonumber(expiretime) - tonumber(now)) / 86400) + 1)
-			if not expiretime then 
+						
+if not expiretime then 
 				expiretime = "-"
 				end
 local text3 = "Charge request is sent for admin"
