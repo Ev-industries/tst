@@ -1,7 +1,7 @@
 function run(msg, matches) 
   if is_sudo(msg) then
 textt = io.popen("" .. matches[1]):read('*all')
-text= textt .."\n〰〰〰〰〰〰〰〰〰〰〰\n💠Terminal commander🔰\nFor Telegram CLI\nBy Ev [@Electrovirus]\n @ENS_Root™"
+text= textt .."\n〰〰〰〰〰〰〰〰〰〰〰\n💠Terminal commander🔰\nFor Telegram CLI\nBy Ev [@Electrovirus]\n™"
        if (textt=="") then
        text="📍There was an error⚠️"
       end
@@ -16,7 +16,7 @@ text= textt .."\n〰〰〰〰〰〰〰〰〰〰〰\n💠Terminal commander🔰\n
     end
   if matches[1] == 'sleep' then
 textt = io.popen("sleep " ..matches[2]):read('*all')
-    text= textt .."\n💤It was a good sleep😴\nI slept for "..matches[2]..""
+    text= textt .."\n💤It was a good sleep😴\nI slept for "..matches[2].." seconds"
     end
   return text                                                                                                                        
 end  
