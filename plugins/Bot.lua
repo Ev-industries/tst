@@ -258,11 +258,11 @@ end
       		print(k, v.." Globally banned")
     	end
     end
-	if matches[1] == 'reload' then
+	if matches[1] == 'resync' then
 		receiver = get_receiver(msg)
 		reload_plugins(true)
-		post_msg(receiver, "Done🌐", ok_cb, false)
-		return "🌏Bot is Reloaded!"
+		post_msg(receiver, "All datas are up to date.", ok_cb, false)
+		return "Database is completely synced with unix console"
 	end
 	--[[*For Debug*
 	if matches[1] == "vardumpmsg" and is_admin1(msg) then
@@ -319,7 +319,7 @@ return {
 	"^[#!/](addcontact) (.*) (.*) (.*)$", 
 	"^[#!/](sendcontact) (.*) (.*) (.*)$",
 	--"^[#!/](mycontact)$",
-	"^[#/!](reload)$",
+	"^[#/!](resync)$",
 	"^[#/!](updateid)$",
 	"^[#/!](sync_gbans)$",
 	--"^[#/!](addlog)$",
