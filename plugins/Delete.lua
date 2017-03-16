@@ -1,5 +1,5 @@
 local function run(msg, matches)
-if matches[1] == 'delete' and is_admin(msg) then
+if matches[1] == 'delete' and is_momod(msg) then
 local hash = 'delete:'..msg.to.id..':'..matches[2]
      redis:set(hash, "waite")
       return '🔖User ('..msg.from.username..') you have requested to delete user '..matches[2]..' \n🔵Press /yes to confirm\nOr\n🔴Press /no to ignore'
